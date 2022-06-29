@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html>
-<header>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
-	<script type="text/javascript">
-		function callbackToApp() {
-			let destination_id = "WEBVIEW-BACK";
-			let data_id = "";
-			if (window.webkit != null) {
-				window.webkit.messageHandlers.destination.postMessage({ destination_id: destination_id, data_id: data_id, mall_code: "" })
-			} else if (window.JSInterface != null) {
-				window.JSInterface.handleJSCallback(JSON.stringify({ destination_id: destination_id, data_id: data_id, mall_code: "" }))
-			}
-			console.log("destination_id: " + destination_id);
-		}
-	</script>
-</header>
-<body>
-	<h1>NWD One App Deeplink Testing</h1>
-	<p><a href="https://o2o.k11.com/link/er2B/59bb6ae6">https://o2o.k11.com/link/er2B/59bb6ae6</a></p>
-	<br>
-	<p><a href="https://k11.onelink.me/er2B/59bb6ae6">https://k11.onelink.me/er2B/59bb6ae6</a></p>
-	<p><a href="k11hkapp://?af_adset=2021-ESHOP%28K11GiftCard%29-K11GiftCard%28WongKarWai%29-FacebookStory%2821Sep%29&af_channel=Social&af_deeplink=true&af_dp=k11hkapp%3A%2F%2F&campaign=2021-ESHOP%28K11GiftCard%29&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=K11MUSEA-FacebookStory&shortlink=59bb6ae6">k11hkapp link</a></p>
-	<br>
-	<p><a href="https://artisanalliving.onelink.me/2200787637/45a90d74">https://artisanalliving.onelink.me/2200787637/45a90d74</a></p>
-	<p><a href="artisanalliving://?af_deeplink=true&af_dp=artisanalLiving%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=45a90d74">artisanalliving link</a></p>
-	<br>
-	<p><a href="https://dparkapp-uat.onelink.me/f5Jm/7e2622df">https://dparkapp-uat.onelink.me/f5Jm/7e2622df</a></p>
-	<p><a href="dparkappuat://?af_deeplink=true&af_dp=dparkappuat%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkappuat link</a></p>
-	<br>
-	<p><a href="https://dparkapp.onelink.me/Phv1/39385c44">https://dparkapp.onelink.me/Phv1/39385c44</a></p>
-	<p><a href="dparkapp://?af_deeplink=true&af_dp=dparkapp%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkapp link</a></p>
-
-	<hr>
-
-	<h1>Webview Back button Testing</h1>
-	<input type = "button" onclick = "callbackToApp()" value = "WEBVIEW-BACK">
-	<br>
-	<br>
-</body>
+  <head>
+    <title>Page Title</title>
+    <meta property="og:title" content="How to Become an SEO Expert (8 Steps)" />
+    <meta property="og:description" content="Get from SEO newbie to SEO pro in 8 simple steps." />
+    <meta property="og:image" content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png" />
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 400px; height: 369px; display: block; flex-grow: 1;" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9mZiIsInZlcnNpb24iOm51bGx9LCJ0ZndfcmVmc3JjX3Nlc3Npb24iOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd191c2VyX2ZvbGxvd19pbnRlbnRfMTQ0MDYiOnsiYnVja2V0IjoiZm9sbG93IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9mZiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1141039841993355264&amp;lang=en&amp;origin=https%3A%2F%2Fhelp.twitter.com%2Fen%2Fusing-twitter%2Fhow-to-embed-a-tweet&amp;sessionId=a417593a3ed05d3d248f934c358790a1a05041f5&amp;theme=light&amp;widgetsVersion=b45a03c79d4c1%3A1654150928467&amp;width=400px" data-tweet-id="1141039841993355264"></iframe>
+    <iframe frameborder = "0" width="100%" src="http://nygardk.github.io/react-share/"></iframe>
+  </body>
 </html>

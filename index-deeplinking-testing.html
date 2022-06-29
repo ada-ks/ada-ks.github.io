@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+	<script type="text/javascript">
+		function callbackToApp() {
+			let destination_id = "WEBVIEW-BACK";
+			let data_id = "";
+			if (window.webkit != null) {
+				window.webkit.messageHandlers.destination.postMessage({ destination_id: destination_id, data_id: data_id, mall_code: "" })
+			} else if (window.JSInterface != null) {
+				window.JSInterface.handleJSCallback(JSON.stringify({ destination_id: destination_id, data_id: data_id, mall_code: "" }))
+			}
+			console.log("destination_id: " + destination_id);
+		}
+	</script>
+</header>
+<body>
+	<h1>NWD One App Deeplink Testing</h1>
+	<p><a href="https://o2o.k11.com/link/er2B/59bb6ae6">https://o2o.k11.com/link/er2B/59bb6ae6</a></p>
+	<br>
+	<p><a href="https://k11.onelink.me/er2B/59bb6ae6">https://k11.onelink.me/er2B/59bb6ae6</a></p>
+	<p><a href="k11hkapp://?af_adset=2021-ESHOP%28K11GiftCard%29-K11GiftCard%28WongKarWai%29-FacebookStory%2821Sep%29&af_channel=Social&af_deeplink=true&af_dp=k11hkapp%3A%2F%2F&campaign=2021-ESHOP%28K11GiftCard%29&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=K11MUSEA-FacebookStory&shortlink=59bb6ae6">k11hkapp link</a></p>
+	<br>
+	<p><a href="https://artisanalliving.onelink.me/2200787637/45a90d74">https://artisanalliving.onelink.me/2200787637/45a90d74</a></p>
+	<p><a href="artisanalliving://?af_deeplink=true&af_dp=artisanalLiving%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=45a90d74">artisanalliving link</a></p>
+	<br>
+	<p><a href="https://dparkapp-uat.onelink.me/f5Jm/7e2622df">https://dparkapp-uat.onelink.me/f5Jm/7e2622df</a></p>
+	<p><a href="dparkappuat://?af_deeplink=true&af_dp=dparkappuat%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkappuat link</a></p>
+	<br>
+	<p><a href="https://dparkapp.onelink.me/Phv1/39385c44">https://dparkapp.onelink.me/Phv1/39385c44</a></p>
+	<p><a href="dparkapp://?af_deeplink=true&af_dp=dparkapp%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkapp link</a></p>
+
+	<hr>
+
+	<h1>Webview Back button Testing</h1>
+	<input type = "button" onclick = "callbackToApp()" value = "WEBVIEW-BACK">
+	<br>
+	<br>
+</body>
+</html>
