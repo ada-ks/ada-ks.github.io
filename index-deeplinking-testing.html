@@ -14,22 +14,128 @@
 			console.log("destination_id: " + destination_id);
 		}
 	</script>
+	<style>
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+		
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+		</style>
 </header>
 <body>
 	<h1>NWD One App Deeplink Testing</h1>
-	<p><a href="https://o2o.k11.com/link/er2B/59bb6ae6">https://o2o.k11.com/link/er2B/59bb6ae6</a></p>
-	<br>
-	<p><a href="https://k11.onelink.me/er2B/59bb6ae6">https://k11.onelink.me/er2B/59bb6ae6</a></p>
-	<p><a href="k11hkapp://?af_adset=2021-ESHOP%28K11GiftCard%29-K11GiftCard%28WongKarWai%29-FacebookStory%2821Sep%29&af_channel=Social&af_deeplink=true&af_dp=k11hkapp%3A%2F%2F&campaign=2021-ESHOP%28K11GiftCard%29&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=K11MUSEA-FacebookStory&shortlink=59bb6ae6">k11hkapp link</a></p>
-	<br>
-	<p><a href="https://artisanalliving.onelink.me/2200787637/45a90d74">https://artisanalliving.onelink.me/2200787637/45a90d74</a></p>
-	<p><a href="artisanalliving://?af_deeplink=true&af_dp=artisanalLiving%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=45a90d74">artisanalliving link</a></p>
-	<br>
-	<p><a href="https://dparkapp-uat.onelink.me/f5Jm/7e2622df">https://dparkapp-uat.onelink.me/f5Jm/7e2622df</a></p>
-	<p><a href="dparkappuat://?af_deeplink=true&af_dp=dparkappuat%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkappuat link</a></p>
-	<br>
-	<p><a href="https://dparkapp.onelink.me/Phv1/39385c44">https://dparkapp.onelink.me/Phv1/39385c44</a></p>
-	<p><a href="dparkapp://?af_deeplink=true&af_dp=dparkapp%3A%2F%2F&campaign=Keysoc%20One%20App%20Test&data_id=43&destination_id=ESHOP-CAMPAIGN-DETAIL&media_source=Social_facebook&shortlink=7e2622df">dparkapp link</a></p>
+	<table>
+		<tr>
+		  <th>Link</th>
+		  <th>Sample (UAT)</th>
+		  <th>Sample (PRD)</th>
+		</tr>
+		<tr>
+		  <td>K11 OneLink</td>
+		  <td>
+		  <ol>
+			<li><a href="https://o2o.k11.com/link/er2B/59bb6ae6">https://o2o.k11.com/link/er2B/59bb6ae6</a></li>
+			<li><a href="https://k11.onelink.me/er2B/59bb6ae6">https://k11.onelink.me/er2B/59bb6ae6</a></li>
+			</ol>
+	  </td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>K11 Raw Link</td>
+		  <td>
+			<ol>
+			  <li><a href="https://api-uat.k11.com/dl/destination?code=AL-Home">https://api-uat.k11.com/dl/destination?code=AL-Home</a></li>
+			  <li><a href="https://api-uat.k11.com/dl/destination?code=Directory&mall_code=HK02">https://api-uat.k11.com/dl/destination?code=Directory&mall_code=HK02</a></li>
+			  <li><a href="https://api-uat.k11.com/dl/destination?code=story-DETAIL&data_id=1467">https://api-uat.k11.com/dl/destination?code=story-DETAIL&data_id=1467</a></li>
+			</ol>
+		  </td>
+		  <td>
+			<ol>
+			  <li><a href="https://api.k11.com/dl/destination?code=AL-Home">https://api.k11.com/dl/destination?code=AL-Home</a></li>
+			  <li><a href="https://api.k11.com/dl/destination?code=Directory&mall_code=HK02">https://api.k11.com/dl/destination?code=Directory&mall_code=HK02</a></li>
+			  <li><a href="https://api.k11.com/dl/destination?code=story-DETAIL&data_id=1467">https://api.k11.com/dl/destination?code=story-DETAIL&data_id=1467</a></li>
+			</ol>
+		  </td>
+		</tr>
+		<tr>
+		  <td>DP OneLink</td>
+		  <td>
+			<ol>
+			  <li><a href="https://dparkapp-uat.onelink.me/f5Jm/59a48349">https://dparkapp-uat.onelink.me/f5Jm/59a48349</a></li>
+			</ol>
+		  </td>
+		  <td>
+			<ol>
+			  <li><a href="https://dparkapp.onelink.me/Phv1/55b21bde">https://dparkapp.onelink.me/Phv1/55b21bde</a></li>
+			</ol>
+		  </td>
+		</tr>
+		<tr>
+		  <td>DP Raw Link</td>
+		  <td>
+			<ol>
+			  <li><a href="https://www-uat.dpark.com.hk/dl/destination?code=AL-Home">https://www-uat.dpark.com.hk/dl/destination?code=AL-Home</a></li>
+			  <li><a href="https://www-uat.dpark.com.hk/dl/destination?code=Directory&mall_code=HK02">https://www-uat.dpark.com.hk/dl/destination?code=Directory&mall_code=HK02</a></li>
+			  <li><a href="https://www-uat.dpark.com.hk/dl/destination?code=story-DETAIL&data_id=1467">https://www-uat.dpark.com.hk/dl/destination?code=story-DETAIL&data_id=1467</a></li>
+			</ol>
+		  </td>
+		  <td>
+			<ol>
+			  <li><a href="https://www.dpark.com.hk/dl/destination?code=AL-Home">https://www.dpark.com.hk/dl/destination?code=AL-Home</a></li>
+			  <li><a href="https://www.dpark.com.hk/dl/destination?code=Directory&mall_code=HK02">httpshttps://www.dpark.com.hk/dl/destination?code=Directory&mall_code=HK02</a></li>
+			  <li><a href="https://www.dpark.com.hk/dl/destination?code=story-DETAIL&data_id=1467">https://www.dpark.com.hk/dl/destination?code=story-DETAIL&data_id=1467</a></li>
+			</ol>
+		  </td>
+		</tr>
+		<tr>
+		  <td>AL OneLink</td>
+		  <td>
+			<ol>
+			  <li><a href="https://artisanalliving.onelink.me/2200787637/45a90d74">https://artisanalliving.onelink.me/2200787637/45a90d74</a></li>
+			</ol>
+		  </td>
+		  <td>
+		  </td>
+		</tr>
+		<tr>
+		  <td>KDP Earn Link</td>
+		  <td>
+			<ol>
+			  <li><a href="https://web-hk-uat.krewards.com/b2b-kdp/abc">https://web-hk-uat.krewards.com/b2b-kdp/abc</a></li>
+			</ol>
+		  </td>
+		  <td>
+			<ol>
+			  <li><a href="https://hk.krewards.com/b2b-kdp/abc">https://hk.krewards.com/b2b-kdp/abc</a></li>
+			</ol>
+		  </td>
+		</tr>
+		<tr>
+		  <td>OnePOS Link</td>
+		  <td>
+			<ol>
+			  <li><a href="https://onepos-uat.k11.com/dl/auto_register_spending/123">https://onepos-uat.k11.com/dl/auto_register_spending/123</a></li>
+			  <li><a href="https://api-uat.k11.com/dl/auto_register_spending/123">https://api-uat.k11.com/dl/auto_register_spending/123</a></li>
+			</ol>
+		  </td>
+		  <td>
+			<ol>
+			  <li><a href="https://onepos.k11.com/dl/auto_register_spending/123">https://onepos.k11.com/dl/auto_register_spending/123</a></li>
+			  <li><a href="https://api.k11.com/dl/auto_register_spending/123">https://api.k11.com/dl/auto_register_spending/123</a></li>
+			</ol>
+		  </td>
+		</tr>
+	  </table>
 
 	<hr>
 
