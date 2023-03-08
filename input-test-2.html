@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script type="text/javascript">
+        window.onload = function pageDidLoad() {
+            window.webkit.messageHandlers.pageDidLoad.postMessage("pageDidLoad");
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Page 2</h1>
+    <input data-initial-value="input field">
+    <button type="button" onclick="window.location.href='input-test.html';">Go to Page 1</button>
+  </body>
+</html>
