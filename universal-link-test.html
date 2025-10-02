@@ -276,6 +276,10 @@
                 <label for="delayInput">Delay (seconds):</label>
                 <input type="number" id="delayInput" placeholder="e.g., 3" value="3" min="1" max="60">
             </div>
+            <div class="input-group">
+                <label for="schemeInput">Custom Scheme:</label>
+                <input type="text" id="schemeInput" placeholder="e.g., ktspdev" value="ktspdev">
+            </div>
             <button class="generate-btn" onclick="generateLinks()">🚀 Generate Links</button>
         </div>
 
@@ -295,16 +299,16 @@
             </div>
 
             <div class="link-item">
-                <h3>Link 3: KTSPDEV Scheme (Delayed)</h3>
-                <div class="url-display" id="ktspdevUrl"></div>
+                <h3>Link 3: Custom Scheme (Delayed)</h3>
+                <div class="url-display" id="customUrl"></div>
                 <button class="action-btn warning" onclick="openDelayedLink()" id="delayedBtn">
-                    ⏰ Open KTSPDEV Link (Delayed)
+                    ⏰ Open Custom Link (Delayed)
                 </button>
             </div>
         </div>
 
         <div class="status info">
-            💡 Tip: The KTSPDEV scheme is typically used for custom app protocols and deep linking
+            💡 Tip: Custom schemes are typically used for app protocols and deep linking
         </div>
 
         <div class="status success" id="statusMessage">
@@ -319,6 +323,7 @@
         function generateLinks() {
             const urlInput = document.getElementById('urlInput').value.trim();
             const delayInput = document.getElementById('delayInput').value;
+            const schemeInput = document.getElementById('schemeInput').value.trim();
 
             if (!urlInput) {
                 alert('Please enter a URL');
@@ -330,6 +335,11 @@
                 return;
             }
 
+            if (!schemeInput) {
+                alert('Please enter a custom scheme');
+                return;
+            }
+
             // Clean the URL (remove any existing scheme)
             const cleanUrl = urlInput.replace(/^https?:\/\//, '');
 
@@ -337,13 +347,13 @@
             generatedLinks = {
                 http: `http://${cleanUrl}`,
                 https: `https://${cleanUrl}`,
-                ktspdev: `ktspdev://${cleanUrl}`
+                custom: `${schemeInput}://${cleanUrl}`
             };
 
             // Display the links
             document.getElementById('httpUrl').textContent = generatedLinks.http;
             document.getElementById('httpsUrl').textContent = generatedLinks.https;
-            document.getElementById('ktspdevUrl').textContent = generatedLinks.ktspdev;
+            document.getElementById('customUrl').textContent = generatedLinks.custom;
 
             // Show the links section
             document.getElementById('linksSection').classList.add('show');
@@ -365,7 +375,7 @@
         function openDelayedLink() {
             const delayInput = document.getElementById('delayInput').value;
             const delay = parseInt(delayInput);
-            const url = generatedLinks.ktspdev;
+            const url = generatedLinks.custom;
             
             if (!url) {
                 alert('Please generate links first');
@@ -408,6 +418,12 @@
             });
             
             document.getElementById('delayInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    generateLinks();
+                }
+            });
+            
+            document.getElementById('schemeInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     generateLinks();
                 }
